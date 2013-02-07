@@ -83,10 +83,10 @@ class IsoGame(object):
            if keys[K_a]:
               self.player.move(-1,0)   # ruch w lewo
        
-           if self.player.x<10: self.player.x = 10
-           if self.player.x>600: self.player.x=600
-           if self.player.y<10: self.player.y = 10
-           if self.player.y>540: self.player.y = 540
+           if self.player.x<0: self.player.x = 800
+           if self.player.x>800: self.player.x=0
+           if self.player.y<0: self.player.y = 600
+           if self.player.y>600: self.player.y = 0
            self.surface.fill((0,0,0))  # czyscimy ekran, malo wydajne ale wystarczy
            #self.surface.blit(self.tree_image, (10,20))     # umieszczamy obrazek a graczem
 
